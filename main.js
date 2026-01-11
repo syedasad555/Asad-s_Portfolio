@@ -24,14 +24,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Initialize custom cursor
 function initCursor() {
+    // Disable cursor on mobile devices
+    if (window.innerWidth <= 768) {
+        const cursor = document.querySelector('.cursor');
+        const cursorFollower = document.querySelector('.cursor-follower');
+        if (cursor) cursor.style.display = 'none';
+        if (cursorFollower) cursorFollower.style.display = 'none';
+        return;
+    }
+    
     const cursor = document.querySelector('.cursor');
     const cursorFollower = document.querySelector('.cursor-follower');
     
     if (!cursor || !cursorFollower) return;
     
     document.addEventListener('mousemove', (e) => {
-        cursor.style.transform = translate(${e.clientX}px, ${e.clientY}px);
-        cursorFollower.style.transform = translate(${e.clientX}px, ${e.clientY}px);
+        cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+        cursorFollower.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
     });
     
     // Add hover effect to interactive elements
@@ -143,7 +152,7 @@ function initNavbar() {
         
         navLinkItems.forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href') === #${current}) {
+            if (link.getAttribute('href') === `#${current}`) {
                 link.classList.add('active');
             }
         });
@@ -164,14 +173,14 @@ function initTextReveal() {
         let html = '';
         
         words.forEach(word => {
-            html += <span style="display: inline-block; overflow: hidden; margin-right: 0.25rem;"><span style="display: inline-block;">${word}</span></span>;
+            html += `<span style="display: inline-block; overflow: hidden; margin-right: 0.25rem;"><span style="display: inline-block;">${word}</span></span>`;
         });
         
         element.innerHTML = html;
         
         // Add animation to each word
         element.querySelectorAll('span > span').forEach((wordSpan, index) => {
-            wordSpan.style.animation = reveal 0.5s forwards ${0.1 + (index * 0.05)}s cubic-bezier(0.5, 0, 0.1, 1);
+            wordSpan.style.animation = `reveal 0.5s forwards ${0.1 + (index * 0.05)}s cubic-bezier(0.5, 0, 0.1, 1)`;
         });
     });
 }
@@ -201,7 +210,7 @@ function initScrollAnimations() {
         // Set initial style
         element.style.opacity = '0';
         element.style.transform = 'translateY(20px)';
-        element.style.transition = opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s;
+        element.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
         
         // Add animation class when in view
         observer.observe(element);
