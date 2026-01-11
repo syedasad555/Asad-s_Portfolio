@@ -116,6 +116,8 @@ function initNavbar() {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     
+    console.log('Navbar initialized', { hamburger, navLinks }); // Debug log
+    
     // Change navbar background on scroll
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -125,36 +127,63 @@ function initNavbar() {
         }
     });
     
-    // Mobile menu toggle
+    // Mobile menu toggle - enhanced version
     if (hamburger && navLinks) {
-        // Handle both click and touch events for mobile
-        const toggleMenu = (e) => {
+        console.log('Setting up hamburger menu'); // Debug log
+        
+        // Remove existing listeners to prevent duplicates
+        hamburger.removeEventListener('click', handleMenuToggle);
+        hamburger.removeEventListener('touchstart', handleMenuToggle);
+        
+        // Create handler function
+        function handleMenuToggle(e) {
             e.preventDefault();
             e.stopPropagation();
-            console.log('Hamburger clicked'); // Debug log
+            console.log('Menu toggle triggered'); // Debug log
+            
+            // Toggle classes
             hamburger.classList.toggle('active');
             navLinks.classList.toggle('active');
-        };
+            
+            console.log('Classes after toggle:', {
+                hamburgerActive: hamburger.classList.contains('active'),
+                navLinksActive: navLinks.classList.contains('active')
+            });
+        }
         
-        hamburger.addEventListener('click', toggleMenu);
-        hamburger.addEventListener('touchstart', toggleMenu);
+        // Add event listeners
+        hamburger.addEventListener('click', handleMenuToggle);
+        hamburger.addEventListener('touchstart', handleMenuToggle);
         
         // Close menu when clicking outside
         document.addEventListener('click', (e) => {
             if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
                 hamburger.classList.remove('active');
                 navLinks.classList.remove('active');
+                console.log('Menu closed by clicking outside');
             }
         });
         
         // Close menu when clicking on nav links
         const navLinksItems = navLinks.querySelectorAll('.nav-link');
         navLinksItems.forEach(link => {
-            link.addEventListener('click', () => {
+            link.addEventListener('click', (e) => {
                 hamburger.classList.remove('active');
                 navLinks.classList.remove('active');
+                console.log('Menu closed by nav link click');
             });
         });
+        
+        // Close menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                console.log('Menu closed by escape key');
+            }
+        });
+    } else {
+        console.error('Hamburger menu elements not found:', { hamburger, navLinks });
     }
     
     // Highlight active nav link based on scroll position
