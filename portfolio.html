@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syed Asadullah - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <div class="page-transition"></div>
+    
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <span>Syed.Dev</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certificate" class="nav-link">Certifications</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-background">
+                <div class="hero-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                </div>
+            </div>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="reveal-text">Hi, I'm <span class="highlight">Syed Asadullah</span></h1>
+                        <div class="typing-container">
+                            <span class="typing">I'm a Web Developer</span>
+                        </div>
+                        <p class="hero-description">Passionate about full-stack web development with a strong desire to build innovative and efficient digital solutions. Currently honing my skills in front-end and back-end technologies while working on real-world projects.</p>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/syed-asadullah-4101652a4/" class="social-link linkedin" data-tooltip="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://www.geeksforgeeks.org/user/syedasad555/" class="social-link geeksforgeeks" data-tooltip="GeeksforGeeks">
+                                <i class="fas fa-code"></i>
+                            </a>
+                            <a href="https://github.com/syedasad555" class="social-link github" data-tooltip="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                        <a href="Asad RESUME5 2006.pdf" class="btn btn-primary" download>
+                            <span>Download Resume</span>
+                            <i class="fas fa-download"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image-container">
+                    <div class="image-frame">
+                        <img src="asad.jpg" alt="Profile" class="hero-image">
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="arrow">
+                    <span></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="section-container">
+                <h2 class="section-title">My <span class="highlight">Skills</span></h2>
+                <div class="section-subtitle">Technologies I work with</div>
+                
+                <div class="skills-grid">
+                    <div class="skill-card" data-skill="HTML5">
+                        <div class="skill-icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <h3 class="skill-title">HTML5</h3>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="CSS3">
+                        <div class="skill-icon">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <h3 class="skill-title">CSS3</h3>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="JavaScript">
+                        <div class="skill-icon">
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <h3 class="skill-title">JavaScript</h3>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="React">
+                        <div class="skill-icon">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <h3 class="skill-title">React.js</h3>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="section-container">
+                <h2 class="section-title">My <span class="highlight">Projects</span></h2>
+                <div class="section-subtitle">What I've been working on</div>
+                
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image-container">
+                            <img src="https://image.slidesdocs.com/responsive-images/background/a-black-calculator-with-two-digits-is-shown-powerpoint-background_9134b71d67__960_540.jpg" alt="Smart Calculator" class="project-image">
+                            <div class="project-overlay">
+                                <a href="cal.html" class="project-link">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Smart Calculator</h3>
+                            <p class="project-description">Developed a fully functional calculator using HTML, CSS, and JavaScript with a clean and responsive UI.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image-container">
+                            <img src="https://buzzer.lk/wp-content/uploads/2023/06/weather_forecast_trueceylon_news_lk-768x432.png" alt="Weather Detector" class="project-image">
+                            <div class="project-overlay">
+                                <a href="weather.html" class="project-link">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Weather Detector</h3>
+                            <p class="project-description">Real-time weather application with temperature, humidity, and weather condition display.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">API</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image-container">
+                            <img src="https://techcrunch.com/wp-content/uploads/2016/12/fb-math.png" alt="Facebook Clone" class="project-image">
+                            <div class="project-overlay">
+                                <a href="fb.html" class="project-link">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Facebook Login UI</h3>
+                            <p class="project-description">Replicated Facebook's login interface with pixel-perfect design and responsiveness.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certificate" class="section">
+            <div class="section-container">
+                <h2 class="section-title">My <span class="highlight">Certifications</span></h2>
+                <div class="section-subtitle">What I've learned</div>
+                
+                <div class="certificates-grid">
+                    <div class="certificate-card">
+                        <div class="certificate-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="certificate-content">
+                            <h3 class="certificate-title">C Programming Essentials</h3>
+                            <p class="certificate-issuer">Cisco Networking Academy</p>
+                            <a href="c.jpg" class="btn btn-secondary">View Certificate</a>
+                        </div>
+                    </div>
+
+                    <div class="certificate-card">
+                        <div class="certificate-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="certificate-content">
+                            <h3 class="certificate-title">Python Programming</h3>
+                            <p class="certificate-issuer">Cisco Networking Academy</p>
+                            <a href="python.jpg" class="btn btn-secondary">View Certificate</a>
+                        </div>
+                    </div>
+
+                    <div class="certificate-card">
+                        <div class="certificate-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="certificate-content">
+                            <h3 class="certificate-title">Linux Programming</h3>
+                            <p class="certificate-issuer">Cisco Networking Academy</p>
+                            <a href="Linux_Essentials_certificate_syedasad5151-gmail-com_668d5154-2f54-45e6-94d1-e3a12f3709b0.pdf" class="btn btn-secondary">View Certificate</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="achievements" class="section">
+            <div class="section-container">
+                <h2 class="section-title">My <span class="highlight">Achievements</span></h2>
+                <div class="section-subtitle">What I'm proud of</div>
+                
+                <div class="achievements-container">
+                    <div class="achievement-card">
+                        <div class="achievement-badge">
+                            <span>2nd</span>
+                        </div>
+                        <div class="achievement-content">
+                            <h3 class="achievement-title">Top Coders Event</h3>
+                            
+                            <p class="achievement-description">Secured 2nd prize in the Top Coders event conducted by E-Box at our college!</p>
+                            <a href="topcoderspic.jpg" class="btn btn-secondary">View Certificate</a>
+                        </div>
+                    </div>
+
+                    <div class="achievement-card">
+                        <div class="achievement-badge">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h3 class="achievement-title">IT Splash Participation</h3>
+                            <p class="achievement-description">Participated in Code Rush and Innovix at IT Splash, showcasing problem-solving and presentation skills.</p>
+                            <a href="IT splash" class="btn btn-secondary">View Certificate</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="section-container">
+                <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
+                <div class="section-subtitle">Let's connect</div>
+                
+                <div class="contact-container">
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3 class="contact-type">Email</h3>
+                            <p class="contact-info">syedasad5151@gmail.com</p>
+                            <a href="mailto:syedasad5151@gmail.com" class="contact-link">Send Email</a>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h3 class="contact-type">Phone</h3>
+                            <p class="contact-info">6301196776</p>
+                            <a href="tel:6301196776" class="contact-link">Call Me</a>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h3 class="contact-type">Location</h3>
+                            <p class="contact-info">Maruthi Nagar, Vijayawada, AP</p>
+                            <a href="https://maps.google.com/?q=Maruthi+Nagar,+Vijayawada,+AP" target="_blank" class="contact-link">View on Map</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <p>&copy; 2025 Syed Asadullah. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/syed-asadullah-4101652a4/" class="footer-social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/syedasad555" class="footer-social-link"><i class="fab fa-github"></i></a>
+                    <a href="https://www.geeksforgeeks.org/user/syedasad555/" class="footer-social-link"><i class="fas fa-code"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
