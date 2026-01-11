@@ -127,9 +127,33 @@ function initNavbar() {
     
     // Mobile menu toggle
     if (hamburger && navLinks) {
-        hamburger.addEventListener('click', () => {
+        // Handle both click and touch events for mobile
+        const toggleMenu = (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Hamburger clicked'); // Debug log
             hamburger.classList.toggle('active');
             navLinks.classList.toggle('active');
+        };
+        
+        hamburger.addEventListener('click', toggleMenu);
+        hamburger.addEventListener('touchstart', toggleMenu);
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+        
+        // Close menu when clicking on nav links
+        const navLinksItems = navLinks.querySelectorAll('.nav-link');
+        navLinksItems.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
         });
     }
     
