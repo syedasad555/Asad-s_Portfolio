@@ -403,7 +403,9 @@ display: inline-block;
 .typing::after {
 content: '|';
 position: absolute;
-right: 0;
+right: -12px;
+top: 50%;
+transform: translateY(-50%);
 color: var(--primary);
 animation: blink 0.7s infinite;
 }
