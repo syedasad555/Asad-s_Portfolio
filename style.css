@@ -379,13 +379,13 @@ body {
     overflow: hidden;
 }
 
-.highlight {
-background: var(--gradient);
+.section-title .highlight {
+    color: var(--primary);
 }
 
 .typing-container {
-display: inline-block;
-margin: var(--spacing-md) 0;
+    display: inline-block;
+    margin: var(--spacing-md) 0;
 }
 
 .typing {
@@ -620,6 +620,18 @@ animation: blink 0.7s infinite;
     text-align: center;
     margin-bottom: var(--spacing-sm);
     position: relative;
+    background: none !important;
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+.section-title .highlight {
+    color: var(--primary);
+    background: none !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
 }
 
 .section-subtitle {
